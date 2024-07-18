@@ -381,7 +381,7 @@ namespace osu_search_filter_generator
             values.AddRange(_modeValue);
             values.AddRange(_keysValue);
             values.AddRange(_statusValue);
-            values.AddRange(_value.Select(item => item[0] + item[1] + item[2]));
+            values.AddRange(_value.Select(item => item[0] + item[1].Replace("≠", "!=") + item[2]));
             if (values.Count == 0)
             {
                 MessageBox.Show("条件を追加してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
