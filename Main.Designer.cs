@@ -62,11 +62,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 19F);
-            this.label1.Location = new System.Drawing.Point(633, 38);
+            this.label1.Font = new System.Drawing.Font("Quicksand Light", 19F);
+            this.label1.Location = new System.Drawing.Point(634, 32);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 26);
+            this.label1.Size = new System.Drawing.Size(106, 39);
             this.label1.TabIndex = 1;
             this.label1.Text = "Preview";
             // 
@@ -276,7 +276,7 @@
             // 
             this.PREVIEW_LABEL.AutoSize = true;
             this.PREVIEW_LABEL.Font = new System.Drawing.Font("Quicksand Light", 16F);
-            this.PREVIEW_LABEL.Location = new System.Drawing.Point(632, 80);
+            this.PREVIEW_LABEL.Location = new System.Drawing.Point(635, 83);
             this.PREVIEW_LABEL.Name = "PREVIEW_LABEL";
             this.PREVIEW_LABEL.Size = new System.Drawing.Size(95, 33);
             this.PREVIEW_LABEL.TabIndex = 24;

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -12,9 +14,24 @@ namespace osu_search_filter_generator
         private string[] _statusValue = Array.Empty<string>();
         private string[][] _value = Array.Empty<string[]>();
 
+        private readonly PrivateFontCollection _fontCollection = new PrivateFontCollection();
+
         public Main()
         {
+            if (!System.IO.File.Exists("./src/Font/Quicksand-Light.ttf"))
+            {
+                MessageBox.Show("フォントファイルが見つかりませんでした。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(1);
+            }
+            _fontCollection.AddFontFile("./src/Font/Quicksand-Light.ttf");
             InitializeComponent();
+            foreach (Control control in Controls)
+            {
+                if (control is Label label)
+                {
+                    label.Font = new Font(_fontCollection.Families[0], control.Font.Size, control.Font.Style, control.Font.Unit, control.Font.GdiCharSet);
+                }
+            }
             MODE_OSU.CheckedChanged += Mode_CheckedChanged;
             MODE_TAIKO.CheckedChanged += Mode_CheckedChanged;
             MODE_CATCH.CheckedChanged += Mode_CheckedChanged;
