@@ -57,6 +57,7 @@
             this.MANIA_3K = new System.Windows.Forms.CheckBox();
             this.MANIA_2K = new System.Windows.Forms.CheckBox();
             this.COPY_BUTTON = new System.Windows.Forms.Button();
+            this.RESET_BUTTON = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -424,7 +425,7 @@
             // 
             // COPY_BUTTON
             // 
-            this.COPY_BUTTON.Location = new System.Drawing.Point(33, 419);
+            this.COPY_BUTTON.Location = new System.Drawing.Point(33, 403);
             this.COPY_BUTTON.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.COPY_BUTTON.Name = "COPY_BUTTON";
             this.COPY_BUTTON.Size = new System.Drawing.Size(112, 46);
@@ -433,12 +434,24 @@
             this.COPY_BUTTON.UseVisualStyleBackColor = true;
             this.COPY_BUTTON.Click += new System.EventHandler(this.COPY_BUTTON_Click);
             // 
+            // RESET_BUTTON
+            // 
+            this.RESET_BUTTON.Location = new System.Drawing.Point(33, 461);
+            this.RESET_BUTTON.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.RESET_BUTTON.Name = "RESET_BUTTON";
+            this.RESET_BUTTON.Size = new System.Drawing.Size(112, 46);
+            this.RESET_BUTTON.TabIndex = 39;
+            this.RESET_BUTTON.Text = "Reset";
+            this.RESET_BUTTON.UseVisualStyleBackColor = true;
+            this.RESET_BUTTON.Click += new System.EventHandler(this.RESET_BUTTON_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1080, 754);
+            this.Controls.Add(this.RESET_BUTTON);
             this.Controls.Add(this.COPY_BUTTON);
             this.Controls.Add(this.MANIA_2K);
             this.Controls.Add(this.MANIA_3K);
@@ -508,6 +521,7 @@
         private System.Windows.Forms.CheckBox MANIA_3K;
         private System.Windows.Forms.CheckBox MANIA_2K;
         private System.Windows.Forms.Button COPY_BUTTON;
+        private System.Windows.Forms.Button RESET_BUTTON;
     }
 }
 

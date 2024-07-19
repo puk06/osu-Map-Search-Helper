@@ -137,7 +137,6 @@ namespace osu_search_filter_generator
         {
             switch (KEY_COMBOBOX.Text)
             {
-
                 case "Status":
                     OPERATION_COMBOBOX.Visible = false;
                     VALUE_TEXTBOX.Visible = false;
@@ -389,6 +388,12 @@ namespace osu_search_filter_generator
             }
             Clipboard.SetText(string.Join(" ", values));
             MessageBox.Show("クリップボードにコピーしました。", "情報", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void RESET_BUTTON_Click(object sender, EventArgs e)
+        {
+            _value = Array.Empty<string[]>();
+            ReloadPreview();
         }
     }
 }
